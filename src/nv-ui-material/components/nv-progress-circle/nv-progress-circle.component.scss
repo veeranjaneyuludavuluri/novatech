@@ -1,0 +1,31 @@
+@import './../../theme/base.scss';
+$circle-diameter: 100px;
+
+.nv-circle-container {
+    position: relative;
+    background-color: transparent;
+    width: $circle-diameter;
+    height: $circle-diameter;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    
+
+
+    .circle-svg {
+        position: absolute;
+        width:  $circle-diameter;
+        height: $circle-diameter;
+    }
+
+    .label {
+        position: absolute;
+        left: $circle-diameter / 3;
+        top: $circle-diameter / 3;
+        width: $circle-diameter / 2;
+        height: $circle-diameter / 2;
+        font-size: $Font-size-large;
+        color: $Font-color-700;
+        height: fit-content;
+    }
+};

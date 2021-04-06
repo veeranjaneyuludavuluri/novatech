@@ -1,0 +1,13 @@
+<div class="search-container">
+    <input class="input" name="input" type="text" placeholder="Search ..." (keydown)="onKeyDown($event)"
+      (beforeinput)="onBeforeInput($event)" (input)="onInput($event)" (focus)="toggleListDisplay(1)"
+      (blur)="toggleListDisplay(0)">
+    <div class="dropdown-container" *ngIf="!hiddenDropDown" (mousedown)="onDropDownMouseDown($event)">
+      <div class="dropdown-content" id="content" *ngFor="let item of suggestions; let i=index" (click)="onItemSelect(i)"
+        [ngClass]="{'selected': i===selectedIndex}">
+        {{item}}
+      </div>
+    </div>
+  
+  </div>
+  

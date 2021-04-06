@@ -1,0 +1,12 @@
+<div class="select-box-container">
+  <select class="select-box" (change)="onChange($event)">
+    <option class="box-item" selected > {{'Select'+' '+ defaultValueType}} </option> 
+    <option class="box-item" *ngFor="let item of itemList" > 
+      <div class="item-avatar" *ngIf="hasAvatar">
+        <app-nv-avatar [assignee]="item"></app-nv-avatar>
+      </div>
+      <div class="item-label">{{item}}</div>
+    </option>
+  </select>  
+</div>
+
